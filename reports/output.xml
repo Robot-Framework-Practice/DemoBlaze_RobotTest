@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on darwin)" generated="20230426 14:37:34.191" rpa="false" schemaversion="3">
+<suite id="s1" name="TC signUp" source="/Users/o_khoa.n/Documents/DemoBlaze_RobotTest/testcases/TC_signUp.robot">
+<test id="s1-t1" name="TC_01_Signup with Valid Data" line="30">
+<kw name="Open my browser" library="SignUpPage">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230426 14:37:35.429" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20230426 14:37:35.429" endtime="20230426 14:37:37.755"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230426 14:37:37.755" endtime="20230426 14:37:38.223"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230426 14:37:38.223" endtime="20230426 14:37:38.223"/>
+</kw>
+<kw name="Should Be Title Case" library="String">
+<arg>STORE</arg>
+<doc>Fails if given ``string`` is not title.</doc>
+<status status="PASS" starttime="20230426 14:37:38.223" endtime="20230426 14:37:38.224"/>
+</kw>
+<status status="PASS" starttime="20230426 14:37:35.429" endtime="20230426 14:37:38.224"/>
+</kw>
+<kw name="Click Signup Link" library="SignUpPage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${SignupLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230426 14:37:38.224" level="INFO">Clicking element 'id=signin2'.</msg>
+<status status="PASS" starttime="20230426 14:37:38.224" endtime="20230426 14:37:39.263"/>
+</kw>
+<status status="PASS" starttime="20230426 14:37:38.224" endtime="20230426 14:37:39.263"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${Popup_Signup}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230426 14:37:39.263" endtime="20230426 14:37:40.312"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${signUpText}</var>
+<arg>${Popup_Signup}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230426 14:37:41.346" level="INFO">${signUpText} = Sign up</msg>
+<status status="PASS" starttime="20230426 14:37:40.312" endtime="20230426 14:37:41.346"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${signUpText}</arg>
+<arg>${signUpTitle}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230426 14:37:41.346" endtime="20230426 14:37:41.347"/>
+</kw>
+<kw name="Input Valid Username" library="SignUpPage">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SignupUsernameInput}</arg>
+<arg>${ValidUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:37:41.349" level="INFO">Typing text 'dangkhoa005' into text field 'id=sign-username'.</msg>
+<status status="PASS" starttime="20230426 14:37:41.348" endtime="20230426 14:37:43.017"/>
+</kw>
+<status status="PASS" starttime="20230426 14:37:41.347" endtime="20230426 14:37:43.020"/>
+</kw>
+<kw name="Input Valid Password" library="SignUpPage">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SignupPasswordInput}</arg>
+<arg>${ValidPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:37:43.023" level="INFO">Typing text 'KendyK021072??..' into text field 'id=sign-password'.</msg>
+<status status="PASS" starttime="20230426 14:37:43.022" endtime="20230426 14:37:44.612"/>
+</kw>
+<status status="PASS" starttime="20230426 14:37:43.021" endtime="20230426 14:37:44.613"/>
+</kw>
+<kw name="Click Signup button" library="SignUpPage">
+<kw name="Click Button" library="Selenium2Library">
+<arg>${SignupBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230426 14:37:44.616" level="INFO">Clicking button 'css:#signInModal &gt; div &gt; div &gt; div.modal-footer &gt; button.btn.btn-primary'.</msg>
+<status status="PASS" starttime="20230426 14:37:44.614" endtime="20230426 14:37:47.203"/>
+</kw>
+<status status="PASS" starttime="20230426 14:37:44.613" endtime="20230426 14:37:47.204"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230426 14:37:52.206" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230426 14:37:47.205" endtime="20230426 14:37:52.206"/>
+</kw>
+<kw name="Alert Should Be Present" library="Selenium2Library">
+<arg>${success_signup}</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20230426 14:37:52.207" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20230426 14:37:54.563" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230426 14:37:54.563" level="FAIL">Alert message should have been 'Sign up successful.' but it was 'This user already exist.'.</msg>
+<status status="FAIL" starttime="20230426 14:37:52.206" endtime="20230426 14:37:54.564"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230426 14:37:54.565" endtime="20230426 14:37:54.565"/>
+</kw>
+<status status="FAIL" starttime="20230426 14:37:35.428" endtime="20230426 14:37:54.565">Alert message should have been 'Sign up successful.' but it was 'This user already exist.'.</status>
+</test>
+<test id="s1-t2" name="TC_02_Signup with InValid Data: Username exist" line="43">
+<kw name="Open my browser" library="SignUpPage">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230426 14:37:54.566" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20230426 14:37:54.566" endtime="20230426 14:37:57.862"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230426 14:37:57.862" endtime="20230426 14:37:58.824"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230426 14:37:58.824" endtime="20230426 14:37:58.824"/>
+</kw>
+<kw name="Should Be Title Case" library="String">
+<arg>STORE</arg>
+<doc>Fails if given ``string`` is not title.</doc>
+<status status="PASS" starttime="20230426 14:37:58.824" endtime="20230426 14:37:58.824"/>
+</kw>
+<status status="PASS" starttime="20230426 14:37:54.566" endtime="20230426 14:37:58.825"/>
+</kw>
+<kw name="Click Signup Link" library="SignUpPage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${SignupLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230426 14:37:58.825" level="INFO">Clicking element 'id=signin2'.</msg>
+<status status="PASS" starttime="20230426 14:37:58.825" endtime="20230426 14:37:59.859"/>
+</kw>
+<status status="PASS" starttime="20230426 14:37:58.825" endtime="20230426 14:37:59.859"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${Popup_Signup}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230426 14:37:59.859" endtime="20230426 14:38:00.896"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${signUpText}</var>
+<arg>${Popup_Signup}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:01.936" level="INFO">${signUpText} = Sign up</msg>
+<status status="PASS" starttime="20230426 14:38:00.897" endtime="20230426 14:38:01.937"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${signUpText}</arg>
+<arg>${signUpTitle}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230426 14:38:01.938" endtime="20230426 14:38:01.939"/>
+</kw>
+<kw name="Input InValid Username" library="SignUpPage">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SignupUsernameInput}</arg>
+<arg>${InvalidUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:01.941" level="INFO">Typing text 'dangkhoaNH' into text field 'id=sign-username'.</msg>
+<status status="PASS" starttime="20230426 14:38:01.940" endtime="20230426 14:38:03.624"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:01.939" endtime="20230426 14:38:03.624"/>
+</kw>
+<kw name="Input Invalid Password" library="SignUpPage">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SignupPasswordInput}</arg>
+<arg>${InvalidPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:03.627" level="INFO">Typing text 'Khoa123456' into text field 'id=sign-password'.</msg>
+<status status="PASS" starttime="20230426 14:38:03.626" endtime="20230426 14:38:05.220"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:03.625" endtime="20230426 14:38:05.220"/>
+</kw>
+<kw name="Click Signup button" library="SignUpPage">
+<kw name="Click Button" library="Selenium2Library">
+<arg>${SignupBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:05.221" level="INFO">Clicking button 'css:#signInModal &gt; div &gt; div &gt; div.modal-footer &gt; button.btn.btn-primary'.</msg>
+<status status="PASS" starttime="20230426 14:38:05.221" endtime="20230426 14:38:07.819"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:05.220" endtime="20230426 14:38:07.819"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230426 14:38:12.822" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230426 14:38:07.820" endtime="20230426 14:38:12.822"/>
+</kw>
+<kw name="Alert Should Be Present" library="Selenium2Library">
+<arg>${error_user}</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20230426 14:38:12.824" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20230426 14:38:12.823" endtime="20230426 14:38:14.354"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230426 14:38:14.355" endtime="20230426 14:38:14.938"/>
+</kw>
+<status status="PASS" starttime="20230426 14:37:54.565" endtime="20230426 14:38:14.938"/>
+</test>
+<test id="s1-t3" name="TC_03_Signup with Empty Data" line="56">
+<kw name="Open my browser" library="SignUpPage">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230426 14:38:14.939" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20230426 14:38:14.939" endtime="20230426 14:38:18.152"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230426 14:38:18.153" endtime="20230426 14:38:19.118"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230426 14:38:19.118" endtime="20230426 14:38:19.118"/>
+</kw>
+<kw name="Should Be Title Case" library="String">
+<arg>STORE</arg>
+<doc>Fails if given ``string`` is not title.</doc>
+<status status="PASS" starttime="20230426 14:38:19.118" endtime="20230426 14:38:19.118"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:14.939" endtime="20230426 14:38:19.118"/>
+</kw>
+<kw name="Click Signup Link" library="SignUpPage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${SignupLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:19.119" level="INFO">Clicking element 'id=signin2'.</msg>
+<status status="PASS" starttime="20230426 14:38:19.119" endtime="20230426 14:38:20.150"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:19.118" endtime="20230426 14:38:20.150"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${Popup_Signup}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230426 14:38:20.150" endtime="20230426 14:38:21.187"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${signUpText}</var>
+<arg>${Popup_Signup}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:22.225" level="INFO">${signUpText} = Sign up</msg>
+<status status="PASS" starttime="20230426 14:38:21.188" endtime="20230426 14:38:22.225"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${signUpText}</arg>
+<arg>${signUpTitle}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230426 14:38:22.226" endtime="20230426 14:38:22.227"/>
+</kw>
+<kw name="Input Empty Username" library="SignUpPage">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SignupUsernameInput}</arg>
+<arg>${EmptyUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:22.229" level="INFO">Typing text '' into text field 'id=sign-username'.</msg>
+<status status="PASS" starttime="20230426 14:38:22.228" endtime="20230426 14:38:23.824"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:22.227" endtime="20230426 14:38:23.825"/>
+</kw>
+<kw name="Input Empty Password" library="SignUpPage">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SignupPasswordInput}</arg>
+<arg>${EmptyPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:23.827" level="INFO">Typing text '' into text field 'id=sign-password'.</msg>
+<status status="PASS" starttime="20230426 14:38:23.826" endtime="20230426 14:38:25.424"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:23.826" endtime="20230426 14:38:25.424"/>
+</kw>
+<kw name="Click Signup button" library="SignUpPage">
+<kw name="Click Button" library="Selenium2Library">
+<arg>${SignupBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:25.426" level="INFO">Clicking button 'css:#signInModal &gt; div &gt; div &gt; div.modal-footer &gt; button.btn.btn-primary'.</msg>
+<status status="PASS" starttime="20230426 14:38:25.425" endtime="20230426 14:38:28.024"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:25.425" endtime="20230426 14:38:28.025"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230426 14:38:33.028" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230426 14:38:28.026" endtime="20230426 14:38:33.028"/>
+</kw>
+<kw name="Alert Should Be Present" library="Selenium2Library">
+<arg>${error_empty}</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20230426 14:38:33.029" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20230426 14:38:33.029" endtime="20230426 14:38:34.552"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230426 14:38:34.552" endtime="20230426 14:38:35.127"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:14.939" endtime="20230426 14:38:35.128"/>
+</test>
+<test id="s1-t4" name="TC_04_Signup with Empty Data: Username Empty" line="69">
+<kw name="Open my browser" library="SignUpPage">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230426 14:38:35.129" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20230426 14:38:35.129" endtime="20230426 14:38:39.167"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230426 14:38:39.167" endtime="20230426 14:38:40.125"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230426 14:38:40.125" endtime="20230426 14:38:40.125"/>
+</kw>
+<kw name="Should Be Title Case" library="String">
+<arg>STORE</arg>
+<doc>Fails if given ``string`` is not title.</doc>
+<status status="PASS" starttime="20230426 14:38:40.125" endtime="20230426 14:38:40.125"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:35.128" endtime="20230426 14:38:40.125"/>
+</kw>
+<kw name="Click Signup Link" library="SignUpPage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${SignupLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:40.126" level="INFO">Clicking element 'id=signin2'.</msg>
+<status status="PASS" starttime="20230426 14:38:40.126" endtime="20230426 14:38:41.162"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:40.126" endtime="20230426 14:38:41.162"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${Popup_Signup}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230426 14:38:41.162" endtime="20230426 14:38:42.197"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${signUpText}</var>
+<arg>${Popup_Signup}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:43.233" level="INFO">${signUpText} = Sign up</msg>
+<status status="PASS" starttime="20230426 14:38:42.198" endtime="20230426 14:38:43.234"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${signUpText}</arg>
+<arg>${signUpTitle}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230426 14:38:43.234" endtime="20230426 14:38:43.235"/>
+</kw>
+<kw name="Input Empty Username" library="SignUpPage">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SignupUsernameInput}</arg>
+<arg>${EmptyUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:43.237" level="INFO">Typing text '' into text field 'id=sign-username'.</msg>
+<status status="PASS" starttime="20230426 14:38:43.236" endtime="20230426 14:38:44.842"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:43.235" endtime="20230426 14:38:44.844"/>
+</kw>
+<kw name="Input Valid Password" library="SignUpPage">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SignupPasswordInput}</arg>
+<arg>${ValidPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:44.847" level="INFO">Typing text 'KendyK021072??..' into text field 'id=sign-password'.</msg>
+<status status="PASS" starttime="20230426 14:38:44.846" endtime="20230426 14:38:46.510"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:44.845" endtime="20230426 14:38:46.511"/>
+</kw>
+<kw name="Click Signup button" library="SignUpPage">
+<kw name="Click Button" library="Selenium2Library">
+<arg>${SignupBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230426 14:38:46.514" level="INFO">Clicking button 'css:#signInModal &gt; div &gt; div &gt; div.modal-footer &gt; button.btn.btn-primary'.</msg>
+<status status="PASS" starttime="20230426 14:38:46.513" endtime="20230426 14:38:49.107"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:46.512" endtime="20230426 14:38:49.108"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230426 14:38:54.110" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230426 14:38:49.109" endtime="20230426 14:38:54.110"/>
+</kw>
+<kw name="Alert Should Be Present" library="Selenium2Library">
+<arg>${error_empty_username}</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20230426 14:38:54.111" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20230426 14:38:56.485" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230426 14:38:56.486" level="FAIL">Alert message should have been 'Please fill out Username.' but it was 'Please fill out Username and Password.'.</msg>
+<status status="FAIL" starttime="20230426 14:38:54.111" endtime="20230426 14:38:56.487"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230426 14:38:56.487" endtime="20230426 14:38:56.487"/>
+</kw>
+<status status="FAIL" starttime="20230426 14:38:35.128" endtime="20230426 14:38:56.487">Alert message should have been 'Please fill out Username.' but it was 'Please fill out Username and Password.'.</status>
+</test>
+<test id="s1-t5" name="TC_05_Signup with Empty Data: Password Empty" line="82">
+<kw name="Open my browser" library="SignUpPage">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230426 14:38:56.490" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20230426 14:38:56.489" endtime="20230426 14:39:00.737"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230426 14:39:00.737" endtime="20230426 14:39:01.691"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230426 14:39:01.691" endtime="20230426 14:39:01.691"/>
+</kw>
+<kw name="Should Be Title Case" library="String">
+<arg>STORE</arg>
+<doc>Fails if given ``string`` is not title.</doc>
+<status status="PASS" starttime="20230426 14:39:01.691" endtime="20230426 14:39:01.691"/>
+</kw>
+<status status="PASS" starttime="20230426 14:38:56.489" endtime="20230426 14:39:01.691"/>
+</kw>
+<kw name="Click Signup Link" library="SignUpPage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${SignupLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230426 14:39:01.692" level="INFO">Clicking element 'id=signin2'.</msg>
+<status status="PASS" starttime="20230426 14:39:01.691" endtime="20230426 14:39:02.741"/>
+</kw>
+<status status="PASS" starttime="20230426 14:39:01.691" endtime="20230426 14:39:02.741"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${Popup_Signup}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230426 14:39:02.741" endtime="20230426 14:39:03.773"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${signUpText}</var>
+<arg>${Popup_Signup}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230426 14:39:04.813" level="INFO">${signUpText} = Sign up</msg>
+<status status="PASS" starttime="20230426 14:39:03.773" endtime="20230426 14:39:04.813"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${signUpText}</arg>
+<arg>${signUpTitle}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230426 14:39:04.814" endtime="20230426 14:39:04.815"/>
+</kw>
+<kw name="Input Valid Username" library="SignUpPage">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SignupUsernameInput}</arg>
+<arg>${ValidUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:39:04.817" level="INFO">Typing text 'dangkhoa005' into text field 'id=sign-username'.</msg>
+<status status="PASS" starttime="20230426 14:39:04.817" endtime="20230426 14:39:06.480"/>
+</kw>
+<status status="PASS" starttime="20230426 14:39:04.816" endtime="20230426 14:39:06.481"/>
+</kw>
+<kw name="Input Empty Password" library="SignUpPage">
+<kw name="Input Text" library="Selenium2Library">
+<arg>${SignupPasswordInput}</arg>
+<arg>${EmptyPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:39:06.484" level="INFO">Typing text '' into text field 'id=sign-password'.</msg>
+<status status="PASS" starttime="20230426 14:39:06.483" endtime="20230426 14:39:08.065"/>
+</kw>
+<status status="PASS" starttime="20230426 14:39:06.482" endtime="20230426 14:39:08.066"/>
+</kw>
+<kw name="Click Signup button" library="SignUpPage">
+<kw name="Click Button" library="Selenium2Library">
+<arg>${SignupBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230426 14:39:08.068" level="INFO">Clicking button 'css:#signInModal &gt; div &gt; div &gt; div.modal-footer &gt; button.btn.btn-primary'.</msg>
+<status status="PASS" starttime="20230426 14:39:08.067" endtime="20230426 14:39:10.672"/>
+</kw>
+<status status="PASS" starttime="20230426 14:39:08.066" endtime="20230426 14:39:10.673"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230426 14:39:15.676" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230426 14:39:10.674" endtime="20230426 14:39:15.676"/>
+</kw>
+<kw name="Alert Should Be Present" library="Selenium2Library">
+<arg>${error_empty_password}</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20230426 14:39:15.676" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20230426 14:39:18.062" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230426 14:39:18.062" level="FAIL">Alert message should have been 'Please fill out Password.' but it was 'Please fill out Username and Password.'.</msg>
+<status status="FAIL" starttime="20230426 14:39:15.676" endtime="20230426 14:39:18.063"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230426 14:39:18.063" endtime="20230426 14:39:18.063"/>
+</kw>
+<status status="FAIL" starttime="20230426 14:38:56.488" endtime="20230426 14:39:18.063">Alert message should have been 'Please fill out Password.' but it was 'Please fill out Username and Password.'.</status>
+</test>
+<status status="FAIL" starttime="20230426 14:37:34.196" endtime="20230426 14:39:18.065"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="3" skip="0" id="s1" name="TC signUp">TC signUp</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230426 14:37:35.407" level="ERROR">Error in file '/Users/o_khoa.n/Documents/DemoBlaze_RobotTest/testcases/TC_signUp.robot' on line 3: Processing variable file '../POM/SignUpPage/SignUpPage.robot' failed: Importing variable file '../POM/SignUpPage/SignUpPage.robot' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/o_khoa.n/Documents/DemoBlaze_RobotTest/testcases
+  /Library/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+  /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+  /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+  /Users/o_khoa.n/Library/Python/3.10/lib/python/site-packages
+  /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages</msg>
+<msg timestamp="20230426 14:37:35.428" level="ERROR">Error in file '/Users/o_khoa.n/Documents/DemoBlaze_RobotTest/POM/SignUpPage/SignUpPage.robot' on line 4: Error in file '/Users/o_khoa.n/Documents/DemoBlaze_RobotTest/testcases/TC_signUp.robot' on line 29: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>
