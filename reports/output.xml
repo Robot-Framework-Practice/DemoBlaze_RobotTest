@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on darwin)" generated="20230426 14:35:26.160" rpa="false" schemaversion="3">
+<suite id="s1" name="TC contact" source="/Users/o_huyen.l/DemoBlaze_RobotTest/testcases/TC_contact.robot">
+<test id="s1-t1" name="TC_01 Sucessful Send Message Contact" line="6">
+<kw name="Open Browser Demoblaze" library="ContactPage">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${Base_Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230426 14:35:26.338" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg timestamp="20230426 14:35:26.339" level="INFO">Executing: /Users/o_huyen.l/Library/Python/3.10/lib/python/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<status status="PASS" starttime="20230426 14:35:26.338" endtime="20230426 14:35:28.986"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230426 14:35:28.986" endtime="20230426 14:35:29.442"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${Delay}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230426 14:35:29.442" endtime="20230426 14:35:29.442"/>
+</kw>
+<status status="PASS" starttime="20230426 14:35:26.338" endtime="20230426 14:35:29.442"/>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<arg>${link_contact}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230426 14:35:29.443" level="INFO">Clicking link 'css:#navbarExample &gt; ul &gt; li:nth-child(2) &gt; a'.</msg>
+<status status="PASS" starttime="20230426 14:35:29.442" endtime="20230426 14:35:30.988"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_email}</arg>
+<arg>huyen@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:35:30.988" level="INFO">Typing text 'huyen@gmail.com' into text field 'id:recipient-email'.</msg>
+<status status="PASS" starttime="20230426 14:35:30.988" endtime="20230426 14:35:32.592"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_name}</arg>
+<arg>huyen</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:35:32.595" level="INFO">Typing text 'huyen' into text field 'id:recipient-name'.</msg>
+<status status="PASS" starttime="20230426 14:35:32.593" endtime="20230426 14:35:34.181"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${input_message}</arg>
+<arg>Please contact me</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230426 14:35:34.184" level="INFO">Typing text 'Please contact me' into text field 'id:message-text'.</msg>
+<status status="PASS" starttime="20230426 14:35:34.182" endtime="20230426 14:35:35.775"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${button_send}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230426 14:35:35.778" level="INFO">Clicking button 'css:#exampleModal &gt; div &gt; div &gt; div.modal-footer &gt; button.btn.btn-primary'.</msg>
+<status status="PASS" starttime="20230426 14:35:35.776" endtime="20230426 14:35:38.368"/>
+</kw>
+<kw name="Alert Should Be Present" library="Selenium2Library">
+<arg>Thanks for the message!!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20230426 14:35:38.370" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20230426 14:35:38.369" endtime="20230426 14:35:39.895"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230426 14:35:39.896" endtime="20230426 14:35:40.477"/>
+</kw>
+<status status="PASS" starttime="20230426 14:35:26.337" endtime="20230426 14:35:40.477"/>
+</test>
+<test id="s1-t2" name="TC_02 Failed Send Message Contact" line="16">
+<kw name="Open Browser Demoblaze" library="ContactPage">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${Base_Url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230426 14:35:40.480" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<msg timestamp="20230426 14:35:40.481" level="INFO">Executing: /Users/o_huyen.l/Library/Python/3.10/lib/python/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<status status="PASS" starttime="20230426 14:35:40.479" endtime="20230426 14:35:43.274"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230426 14:35:43.274" endtime="20230426 14:35:44.264"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${Delay}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230426 14:35:44.264" endtime="20230426 14:35:44.265"/>
+</kw>
+<status status="PASS" starttime="20230426 14:35:40.478" endtime="20230426 14:35:44.265"/>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<arg>${link_contact}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230426 14:35:44.265" level="INFO">Clicking link 'css:#navbarExample &gt; ul &gt; li:nth-child(2) &gt; a'.</msg>
+<status status="PASS" starttime="20230426 14:35:44.265" endtime="20230426 14:35:45.805"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${button_send}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230426 14:35:45.807" level="INFO">Clicking button 'css:#exampleModal &gt; div &gt; div &gt; div.modal-footer &gt; button.btn.btn-primary'.</msg>
+<status status="PASS" starttime="20230426 14:35:45.806" endtime="20230426 14:35:48.406"/>
+</kw>
+<kw name="Alert Should Be Present" library="Selenium2Library">
+<arg>Please fill all fields</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20230426 14:35:48.408" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20230426 14:35:50.956" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230426 14:35:50.957" level="FAIL">Alert message should have been 'Please fill all fields' but it was 'Thanks for the message!!'.</msg>
+<status status="FAIL" starttime="20230426 14:35:48.407" endtime="20230426 14:35:50.960"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20230426 14:35:50.960" endtime="20230426 14:35:50.960"/>
+</kw>
+<status status="FAIL" starttime="20230426 14:35:40.478" endtime="20230426 14:35:50.960">Alert message should have been 'Please fill all fields' but it was 'Thanks for the message!!'.</status>
+</test>
+<status status="FAIL" starttime="20230426 14:35:26.163" endtime="20230426 14:35:50.961"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="TC contact">TC contact</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
