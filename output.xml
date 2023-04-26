@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on darwin)" generated="20230426 11:53:27.903" rpa="false" schemaversion="3">
+<suite id="s1" name="TC HomePage" source="/Users/o_vy.p/DemoBlaze_RobotTest/testcases/TC_HomePage.robot">
+<test id="s1-t1" name="TC01 - HomePage_Title" line="6">
+<kw name="Open Browser To HomePage" library="HomePage">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${base_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230426 11:53:28.284" level="INFO">Opening browser 'chrome' to base url 'https://demoblaze.com/'.</msg>
+<status status="PASS" starttime="20230426 11:53:28.282" endtime="20230426 11:53:31.479"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230426 11:53:31.479" endtime="20230426 11:53:31.940"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${second}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230426 11:53:31.940" endtime="20230426 11:53:31.941"/>
+</kw>
+<status status="PASS" starttime="20230426 11:53:28.281" endtime="20230426 11:53:31.942"/>
+</kw>
+<kw name="Wait Until Location Is" library="Selenium2Library">
+<arg>${base_url}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20230426 11:53:31.942" endtime="20230426 11:53:32.451"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${message}</var>
+<arg>${logo_title}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230426 11:53:33.478" level="INFO">${message} = PRODUCT STORE</msg>
+<status status="PASS" starttime="20230426 11:53:32.452" endtime="20230426 11:53:33.478"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${message}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230426 11:53:33.479" endtime="20230426 11:53:33.480"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${message}</arg>
+<arg>PRODUCT STORE</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230426 11:53:33.480" endtime="20230426 11:53:33.481"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${delay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230426 11:53:34.984" level="INFO">Slept 1 second 500 milliseconds</msg>
+<status status="PASS" starttime="20230426 11:53:33.482" endtime="20230426 11:53:34.987"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230426 11:53:34.989" endtime="20230426 11:53:35.570"/>
+</kw>
+<status status="PASS" starttime="20230426 11:53:28.280" endtime="20230426 11:53:35.570"/>
+</test>
+<status status="PASS" starttime="20230426 11:53:27.910" endtime="20230426 11:53:35.572"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC HomePage">TC HomePage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
