@@ -15,19 +15,19 @@ TC02 - Slideshow_Next
     Open Browser To HomePage
     Wait Until Location Is              ${URL}
     FOR    ${firstImage}    IN    @{images}
-        Click Element                       ${btnSlideshowNext}
+        Click Element                   ${btnSlideshowNext}
         # Wait until element is visible       ${slideshow}\[contains(@class, 'carousel-item active')]
-        Sleep                     ${delay}
+        Sleep                           ${delay}
     END
     Sleep                               ${delay}
     Close Browser
 
 TC03 - Slideshow_Prev
     Open Browser To HomePage
-    Wait Until Location Is              ${URL}
+    Wait Until Location Is        ${URL}
     FOR    ${firstImage}    IN    ${count}
         Click Element             ${btnSlideshowPrev}
         Sleep                     ${delay}
     END
-    Sleep                               ${delay}
+    Sleep                         ${delay}
     Close Browser
