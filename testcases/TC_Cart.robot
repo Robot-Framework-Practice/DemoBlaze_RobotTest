@@ -3,7 +3,7 @@ Resource     ../POM/Cart/Cart.robot
 
 *** Test cases ***
 TC_AddtoCART
-    Open Browser HomePage
+    Open Browser To HomePage
     #Sleep    5s
     Wait Until Element Is Visible    ${Elem}
     Click Element                    ${Elem}           #Link phone
@@ -14,7 +14,7 @@ TC_AddtoCART
     Close Browser
 
 TC_Cart
-    Open Browser HomePage
+    Open Browser To HomePage
     Wait Until Element Is Visible    ${Elem}    
     Click Element                    ${Elem}               #Link phone
     Sleep                            ${Time}
@@ -29,7 +29,7 @@ TC_Cart
     Close Browser
 
 TC_Purchase
-    Open Browser HomePage
+    Open Browser To HomePage
     Click Link      css:#navbarExample > ul > li:nth-child(4) > a            #Button Cart
     Click Button    css:#page-wrapper > div > div.col-lg-1 > Button        #Button Place Order
     Input Text        id=name        TT

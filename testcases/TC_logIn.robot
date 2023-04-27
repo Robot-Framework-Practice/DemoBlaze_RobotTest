@@ -1,6 +1,4 @@
 *** Settings ***
-Library         Selenium2Library
-Variables       ../POM/LoginPage/LoginPage.robot
 Resource        ../POM/LoginPage/LoginPage.robot
 
 *** Variables ***
@@ -28,7 +26,7 @@ ${error_empty_password}       Please fill out Password.
 
 *** Test Cases ***
 TC_01_Login with Valid Data
-    Open my browser
+    Open Browser To HomePage
     Click Login Link
     Wait Until Element Is Visible    ${Popup_Login}
     ${logInText}   Get Text          ${Popup_Login}
@@ -42,7 +40,7 @@ TC_01_Login with Valid Data
     Close Browser
 
 TC_02_Login with Invalid Data: User not exist
-    Open my browser
+    Open Browser To HomePage
     Click Login Link
     Wait Until Element Is Visible    ${Popup_Login}
     ${logInText}   Get Text          ${Popup_Login}
@@ -55,7 +53,7 @@ TC_02_Login with Invalid Data: User not exist
     Close Browser
 
 TC_03_Lgin with Invalid Data: Password invalid
-    Open my browser
+    Open Browser To HomePage
     Click Login Link
     Wait Until Element Is Visible    ${Popup_Login}
     ${logInText}   Get Text          ${Popup_Login}
@@ -68,7 +66,7 @@ TC_03_Lgin with Invalid Data: Password invalid
     Close Browser
 
 TC_04_Login with Empty Data
-    Open my browser
+    Open Browser To HomePage
     Click Login Link
     Wait Until Element Is Visible    ${Popup_Login}
     ${logInText}   Get Text          ${Popup_Login}
@@ -81,7 +79,7 @@ TC_04_Login with Empty Data
     Close Browser
 
 TC_05_Login with Empty Data: Empty Username
-    Open my browser
+    Open Browser To HomePage
     Click Login Link
     Wait Until Element Is Visible    ${Popup_Login}
     ${logInText}   Get Text          ${Popup_Login}
@@ -94,7 +92,7 @@ TC_05_Login with Empty Data: Empty Username
     Close Browser
 
 TC_06_Login with Empty Data: Empty Password
-    Open my browser
+    Open Browser To HomePage
     Click Login Link
     Wait Until Element Is Visible    ${Popup_Login}
     ${logInText}   Get Text          ${Popup_Login}

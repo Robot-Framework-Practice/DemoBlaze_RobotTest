@@ -1,6 +1,4 @@
 *** Settings ***
-Library         Selenium2Library
-Variables       ../POM/SignUpPage/SignUpPage.robot
 Resource        ../POM/SignUpPage/SignUpPage.robot
 
 *** Variables ***
@@ -23,12 +21,12 @@ ${success_signup}              Sign up successful.
 # Error message
 ${error_user}                  This user already exist.
 ${error_empty}                 Please fill out Username and Password.
-${error_empty_username}       Please fill out Username.
-${error_empty_password}       Please fill out Password.
+${error_empty_username}        Please fill out Username.
+${error_empty_password}        Please fill out Password.
 
 *** Test Cases ***
 TC_01_Signup with Valid Data
-    Open my browser
+    Open Browser To HomePage
     Click Signup Link
     Wait Until Element Is Visible    ${Popup_Signup}
     ${signUpText}   Get Text         ${Popup_Signup}
@@ -41,7 +39,7 @@ TC_01_Signup with Valid Data
     Close Browser
 
 TC_02_Signup with InValid Data: Username exist
-    Open my browser
+    Open Browser To HomePage
     Click Signup Link
     Wait Until Element Is Visible    ${Popup_Signup}
     ${signUpText}   Get Text         ${Popup_Signup}
@@ -54,7 +52,7 @@ TC_02_Signup with InValid Data: Username exist
     Close Browser
 
 TC_03_Signup with Empty Data
-    Open my browser
+    Open Browser To HomePage
     Click Signup Link
     Wait Until Element Is Visible    ${Popup_Signup}
     ${signUpText}   Get Text         ${Popup_Signup}
@@ -67,7 +65,7 @@ TC_03_Signup with Empty Data
     Close Browser
 
 TC_04_Signup with Empty Data: Username Empty
-    Open my browser
+    Open Browser To HomePage
     Click Signup Link
     Wait Until Element Is Visible    ${Popup_Signup}
     ${signUpText}   Get Text         ${Popup_Signup}
@@ -80,7 +78,7 @@ TC_04_Signup with Empty Data: Username Empty
     Close Browser
 
 TC_05_Signup with Empty Data: Password Empty
-    Open my browser
+    Open Browser To HomePage
     Click Signup Link
     Wait Until Element Is Visible    ${Popup_Signup}
     ${signUpText}   Get Text         ${Popup_Signup}
