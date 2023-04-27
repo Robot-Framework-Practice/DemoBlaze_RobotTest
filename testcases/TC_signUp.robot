@@ -1,10 +1,9 @@
 *** Settings ***
-Library         Selenium2Library
 Resource        ../POM/SignUpPage/SignUpPage.robot
 
 *** Test Cases ***
 TC_01_Signup with Valid Data
-    Open my browser
+    Open Browser To HomePage
     Click Signup Link
     Compare Title SignUp
     Input Valid Username
@@ -15,7 +14,7 @@ TC_01_Signup with Valid Data
     Close Browser
 
 TC_02_Signup with InValid Data: Username exist
-    Open my browser
+    Open Browser To HomePage
     Click Signup Link
     Compare Title SignUp
     Input Invalid Username
@@ -26,7 +25,7 @@ TC_02_Signup with InValid Data: Username exist
     Close Browser
 
 TC_03_Signup with Empty Data
-    Open my browser
+    Open Browser To HomePage
     Click Signup Link
     Compare Title SignUp
     Input Empty Username
@@ -37,7 +36,7 @@ TC_03_Signup with Empty Data
     Close Browser
 
 TC_04_Signup with Empty Data: Username Empty
-    Open my browser
+    Open Browser To HomePage
     Click Signup Link
     Compare Title SignUp
     Input Empty Username
@@ -48,7 +47,7 @@ TC_04_Signup with Empty Data: Username Empty
     Close Browser
 
 TC_05_Signup with Empty Data: Password Empty
-    Open my browser
+    Open Browser To HomePage
     Click Signup Link
     Compare Title SignUp
     Input Valid Username

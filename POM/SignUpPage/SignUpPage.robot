@@ -1,14 +1,8 @@
 *** Settings ***
-Library                       Selenium2Library
-Library                       String
-Resource                      ../../testcases/TC_signUp.robot
+Resource            ../source.robot
+Resource            ../../testcases/TC_signUp.robot
 
 *** Variables ***
-# Common
-${URL}                        https://www.demoblaze.com/index.html
-${Browser}                    Chrome
-${DELAY}                      0.5s
-
 # Locators
 ${SignupLink}                 id=signin2
 ${SignupUsernameInput}        id=sign-username
@@ -40,12 +34,6 @@ ${error_empty_username}        Please fill out Username.
 ${error_empty_password}        Please fill out Password.
 
 *** Keywords ***
-Open my browser
-    Open Browser               ${URL}    ${Browser}
-    Maximize Browser Window
-    Set Selenium Speed         ${DELAY}
-    Should Be Title Case       STORE
-
 Input Valid Username
     Input Text                 ${SignupUsernameInput}    ${ValidUsername}
 
