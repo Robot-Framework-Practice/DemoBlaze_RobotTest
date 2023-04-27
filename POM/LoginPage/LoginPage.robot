@@ -4,34 +4,70 @@ Resource        ../../testcases/TC_logIn.robot
 
 *** Variables ***
 # Locators
-${LoginLink}              id=login2
-${LoginUsernameInput}     id=loginusername
-${LoginPasswordInput}     id=loginpassword
-${LoginBtn}               css:#logInModal > div > div > div.modal-footer > button.btn.btn-primary
-${WelcomeId}              id=nameofuser
-${Popup_Login}            id=logInModalLabel
+${LoginLink}                 id=login2
+${LoginUsernameInput}        id=loginusername
+${LoginPasswordInput}        id=loginpassword
+${LoginBtn}                  xpath://button[normalize-space()='Log in']
+${WelcomeId}                 id=nameofuser
+${Popup_Login}               id=logInModalLabel
+
+# Test Data
+${time}                       5s
+
+${ValidUsername}              dangkhoaNH
+${ValidPassword}              KendyK021072??..
+
+${InvalidUsername}            dangkhoa100
+${InvalidPassword}            Khoa123456
+
+${EmptyUsername}          
+${EmptyPassword}
+
+
+${welcomeUser}                Welcome dangkhoaNH
+${logInTitle}                 Log in
+
+# Message error
+${error_user}                 User does not exist.
+${error_password}             Wrong password.
+${error_empty}                Please fill out Username and Password.
+${error_empty_username}       Please fill out Username.
+${error_empty_password}       Please fill out Password.
 
 *** Keywords ***
 Input Valid Username
-    Input Text              ${LoginUsernameInput}    ${ValidUsername}
+    Input Text                ${LoginUsernameInput}    ${ValidUsername}
 
 Input Valid Password
-    Input Text              ${LoginPasswordInput}    ${ValidPassword}    
+    Input Text                ${LoginPasswordInput}    ${ValidPassword}    
 
 Input InValid Username      
-    Input Text              ${LoginUsernameInput}    ${InvalidUsername}
+    Input Text                ${LoginUsernameInput}    ${InvalidUsername}
 
 Input Invalid Password
-    Input Text              ${LoginPasswordInput}    ${InvalidPassword}
+    Input Text                ${LoginPasswordInput}    ${InvalidPassword}
 
 Input Empty Username        
-    Input Text              ${LoginUsernameInput}    ${EmptyUsername}
+    Input Text                ${LoginUsernameInput}    ${EmptyUsername}
 
 Input Empty Password        
-    Input Text              ${LoginPasswordInput}    ${EmptyPassword}
+    Input Text                ${LoginPasswordInput}    ${EmptyPassword}
 
 Click Login button
-    Click Button            ${LoginBtn}
+    Click Button              ${LoginBtn}
 
 Click Login Link
-    Click Element           ${LoginLink}
+    Click Element             ${LoginLink}
+
+Compare Title LogIn
+    Wait Until Element Is Visible    ${Popup_Login}
+    ${logInText}   Get Text          ${Popup_Login}
+    Should Be Equal                  ${logInText}        ${logInTitle}
+
+Compare Welcome User
+    Wait Until Element Is Visible    ${WelcomeId}
+    ${welcomeText}   Get Text        ${WelcomeId}
+    Should Be Equal                  ${welcomeText}        ${welcomeUser}
+
+SleepTime
+    Sleep                      ${time}
