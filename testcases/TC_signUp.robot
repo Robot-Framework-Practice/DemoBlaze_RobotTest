@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../POM/SignUpPage/SignUpPage.robot
+Resource        ../POM/SignUpPage.robot
 
 *** Test Cases ***
 TC_01_Signup with Valid Data
@@ -56,3 +56,4 @@ TC_05_Signup with Empty Data: Password Empty
     SleepTime
     Alert Should Be Present          ${error_empty_password}
     Close Browser
+    

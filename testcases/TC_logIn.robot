@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../POM/LoginPage/LoginPage.robot
+Resource        ../POM/LoginPage.robot
 
 *** Test Cases ***
 TC_01_Login with Valid Data
@@ -66,3 +66,4 @@ TC_06_Login with Empty Data: Empty Password
     SleepTime
     Alert Should Be Present          ${error_empty_password}
     Close Browser
+    

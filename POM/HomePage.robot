@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../source.robot
+Resource        source.robot
 
 *** Variables ***
 ${logo_title}            xpath://a[@id='nava']//img

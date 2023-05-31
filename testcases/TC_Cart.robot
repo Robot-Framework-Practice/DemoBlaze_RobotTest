@@ -1,12 +1,12 @@
 *** Settings ***
-Resource     ../POM/Cart/Cart.robot
+Resource     ../POM/Cart.robot
 
 *** Test cases ***
 TC_AddtoCART
     Open Browser To HomePage
     #Sleep    5s
-    Wait Until Element Is Visible    ${Elem}
-    Click Element                    ${Elem}           #Link phone
+    Wait Until Element Is Visible    ${Elem}
+    Click Element                    ${Elem}           #Link phone
     Sleep                            ${Time}
     Click Link                       css:#tbodyid > div.row > div > a        # Button Add to Cart
     Sleep                            ${Time}
@@ -15,14 +15,14 @@ TC_AddtoCART
 
 TC_Cart
     Open Browser To HomePage
-    Wait Until Element Is Visible    ${Elem}    
-    Click Element                    ${Elem}               #Link phone
+    Wait Until Element Is Visible    ${Elem}    
+    Click Element                    ${Elem}               #Link phone
     Sleep                            ${Time}
     Click Link                       css:#tbodyid > div.row > div > a        # Button Add to Cart
     Sleep                            ${Time}
     Handle Alert                     ACCEPT            timeout=2s
     Click Link                       css:#navbarExample > ul > li:nth-child(4) > a             #Button Cart
-    Wait Until Element Is Visible    css:#tbodyid > tr:nth-child(1) > td:nth-child(4) > a    
+    Wait Until Element Is Visible    css:#tbodyid > tr:nth-child(1) > td:nth-child(4) > a
     Click Link                       css:#tbodyid > tr:nth-child(1) > td:nth-child(4) > a
     #Click Button                     css:#page-wrapper > div > div.col-lg-1 > button            #Button Place Order
     Sleep                            ${Time}
