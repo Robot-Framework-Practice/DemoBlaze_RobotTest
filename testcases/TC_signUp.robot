@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../POM/SignUpPage/SignUpPage.robot
+Resource        ../POM/SignUpPage.robot
 
 *** Variables ***
 ${time}                       5s
@@ -89,3 +89,4 @@ TC_05_Signup with Empty Data: Password Empty
     Sleep                            ${time}
     Alert Should Be Present          ${error_empty_password}
     Close Browser
+    

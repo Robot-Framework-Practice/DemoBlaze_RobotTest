@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../source.robot
+Resource    source.robot
 
 *** Variables ***
 ${link_contact}        css:#navbarExample > ul > li:nth-child(2) > a

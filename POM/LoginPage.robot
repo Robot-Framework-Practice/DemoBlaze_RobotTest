@@ -1,6 +1,6 @@
 *** Settings ***
-Resource        ../source.robot
-Resource        ../../testcases/TC_logIn.robot
+Resource        source.robot
+Resource        ../testcases/TC_logIn.robot
 
 *** Variables ***
 # Locators

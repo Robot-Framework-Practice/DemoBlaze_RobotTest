@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../POM/HomePage/HomePage.robot
+Resource        ../POM/HomePage.robot
 
 *** Test Cases ***
 TC01 - HomePage_Title
@@ -31,3 +31,4 @@ TC03 - Slideshow_Prev
     END
     Sleep                         ${delay}
     Close Browser
+    

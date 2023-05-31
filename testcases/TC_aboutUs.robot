@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../POM/AboutUsPage/AboutUsPage.robot
+Resource    ../POM/AboutUsPage.robot
 
 
 *** Test cases ***
@@ -11,6 +11,3 @@ TC_01 Sucessful About Us
     Click Button    ${button_pause}
     Click Button    ${button_close} 
     Close Browser
-
-
-

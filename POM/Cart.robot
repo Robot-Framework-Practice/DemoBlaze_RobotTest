@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../source.robot
+Resource    source.robot
 
 *** Variable *** 
 ${Elem}         css:#tbodyid > div:nth-child(1) > div > div > h4 > a    

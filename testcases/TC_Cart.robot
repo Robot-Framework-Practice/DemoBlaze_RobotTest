@@ -1,5 +1,5 @@
 *** Settings ***
-Resource     ../POM/Cart/Cart.robot
+Resource     ../POM/Cart.robot
 
 *** Test cases ***
 TC_AddtoCART
@@ -41,3 +41,4 @@ TC_Purchase
     Click Button    css:#orderModal > div > div > div.modal-footer > button.btn.btn-primary        #Button Purchase
     Sleep    ${Time}
     Close Browser
+    

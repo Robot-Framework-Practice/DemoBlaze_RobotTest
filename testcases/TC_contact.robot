@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../POM/ContactPage/ContactPage.robot
+Resource    ../POM/ContactPage.robot
 
 
 *** Test cases ***
@@ -19,4 +19,3 @@ TC_02 Failed Send Message Contact
     Click Button    ${button_send}
     Alert Should Be Present    Please fill all fields
     Close Browser
-

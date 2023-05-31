@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        ../POM/LoginPage/LoginPage.robot
+Resource        ../POM/LoginPage.robot
 
 *** Variables ***
 ${time}                       5s
@@ -103,3 +103,4 @@ TC_06_Login with Empty Data: Empty Password
     Sleep                            ${time}
     Alert Should Be Present          ${error_empty_password}
     Close Browser
+    
